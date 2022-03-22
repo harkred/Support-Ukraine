@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: rgb(255, 254, 245);
+}
+
+#header h1 {
+    color:rgb(255, 254, 245);
+    margin-left: 10px;
+}
+
+#nav-bar {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(1, 5, 18);
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: -10px;
+}
+
+#nav-bar a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+#nav-bar a:hover {
+    color: rgb(255, 250, 105);
+    text-decoration: underline;
+}
+
+#header {
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;   
+}
+
+#nav-links {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#home h2 {
+    font-size: 9em;
+    color: rgb(1, 5, 18);
+}
+
+#flag {
+    display: flex;
+    margin-left: 100px;
+}
+
+#yellow {
+    width: 20px;
+    height: 100vh;
+    background: rgb(255, 200, 0);
+}
+
+#blue {
+    width: 20px;
+    height: 100vh;
+    background: rgb(4, 18, 63);
+}
+
+#about {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(6,3,46,1) 55%, rgba(9,7,55,1) 80%, rgba(7,2,71,0.8882279829545454) 100%);
+    font-weight: bold;
+}
+
+#p1 {
+    align-self: flex-start;
+    width: 150px;
+    height: 150px;
+    border-radius: 30% 70% 70% 30% / 30% 35% 65% 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(249,239,2,1) 0%, rgba(225,227,23,1) 53%, rgba(249,239,2,1) 100%);
+    margin-left: 2em;
+    margin-top: 2em;
+    padding: 15px;
+    font-weight: inherit;
+}
+
+#p2 {
+    align-self: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 30% 70% 70% 30% / 30% 35% 65% 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(249,239,2,1) 0%, rgba(225,227,23,1) 53%, rgba(249,239,2,1) 100%);
+    padding: 25px;
+    font-weight: inherit;
+}
+
+#p3 {
+    align-self: flex-end;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border-radius: 30% 70% 70% 30% / 30% 35% 65% 70%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(249,239,2,1) 0%, rgba(225,227,23,1) 53%, rgba(249,239,2,1) 100%);
+    margin-right: 2em;
+    margin-bottom: 2em;
+    padding: 10px;
+    font-weight: inherit;
+}
+
+#blogs {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    background-color: rgb(1, 5, 18);
+}
+
+#blogs h2 {
+    color:rgb(255, 254, 245);
+    text-align: center;
+    margin: auto;
+}
+
+.blog-link {
+    width: 100vw;
+    text-decoration: none;
+    color:rgb(1, 5, 18);
+    font-size: 1.5em;
+    background-color: #FBFCDF;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-style: solid;
+    border-color: black; 
+    border-width: 3px;
+}
+
+#donate {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#donate h3 {
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+#donate-link {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 200, 0);
+    padding: 10px 50px 10px 50px;
+    border-radius: 35px;
+}
+
+#donate-link:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 730px) {
+    #nav-bar {
+        width: 100vw;
+    }
+
+    #flag {
+        display: none;
+    }
+
+    #p1 {
+        align-self: center;
+    }
+
+    #p2 {
+        align-self: center;
+        margin: 0;
+    }
+
+    #p3 {
+        align-self: center;
+        margin: 0;
+    }
+}
