@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -12,6 +7,8 @@ html {
 body {
     font-family: 'PT Sans', sans-serif;
     background-color: rgb(255, 254, 245);
+    display: flex;
+    flex-direction: column;
 }
 
 #header h1 {
@@ -29,6 +26,8 @@ body {
     padding-bottom: 10px;
     position: fixed;
     top: -10px;
+    left: 0;
+    right: 0;
 }
 
 #nav-bar a {
@@ -197,8 +196,29 @@ body {
 }
 
 @media(max-width: 730px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: stretch;
+    }
+
+    #header h1 {
+        color: rgb(4, 18, 63);
+        margin: auto;
+    }
+
     #nav-bar {
-        width: 100vw;
+        background-color: rgb(255, 254, 245);
+        position: static;
+    }
+
+    #nav-links {
+        display: none
+    }
+
+    #home h2 {
+        font-size: 7em;
     }
 
     #flag {
