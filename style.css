@@ -240,12 +240,31 @@ body {
     }
 
     @media(max-width: 450px) {
-        #about {
+        #home h2 {
+            font-size: 4em;
+            margin: auto;
+        }
+
+        #p1 {
+            padding: 10px;
+        }
+
+        #p2 {
+            padding: 13px;
+        }
+
+        #p3 {
             display: none;
         }
 
-        #blogs {
-            display: none;
+        #blogs h2 {
+            padding: 1px;
+            font-size: 1em;
+        }
+
+        #donate h3 {
+            font-size: 1.5em;
+            margin-bottom: 0;
         }
     }
 }
