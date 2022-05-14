@@ -245,10 +245,20 @@ body {
 
 @media(max-width: 350px) {
     #home h2 {
-        font-size: 3.5em;
+        font-size: 4em;
     }
 
     #donate h3 {
         font-size: 1.2em;
+    }
+}
+
+@media(max-width: 290px) {
+    #home h2 {
+        font-size: 3em;
+    }
+
+    #donate h3 {
+        font-size: 0.8em;
     }
 }
