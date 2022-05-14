@@ -242,3 +242,13 @@ body {
         padding: 5px 20px 5px 20px;
     }
 }
+
+@media(max-width: 350px) {
+    #home h2 {
+        font-size: 3.5em;
+    }
+
+    #donate h3 {
+        font-size: 1.2em;
+    }
+}
