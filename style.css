@@ -1,29 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'PT Sans', sans-serif;
     background-color: rgb(255, 254, 245);
     display: flex;
     flex-direction: column;
-}
-
-#header h1 {
-    color:rgb(255, 254, 245);
-    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 #nav-bar {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: rgb(1, 5, 18);
-    padding-top: 20px;
-    padding-bottom: 10px;
-    position: fixed;
-    top: -10px;
-    left: 0;
-    right: 0;
+    padding: 0.5em;
+}
+
+#nav-bar h1 {
+    color:rgb(255, 254, 245);    
 }
 
 #nav-bar a {
@@ -37,14 +39,9 @@ body {
     text-decoration: underline;
 }
 
-#header {
-    width: 45%;
-    display: flex;
-    justify-content: flex-start;   
-}
-
 #nav-links {
-    width: 45%;
+    justify-self: flex-end;
+    width: 50%;
     display: flex;
     justify-content: space-around;
 }
@@ -60,6 +57,7 @@ body {
 #home h2 {
     font-size: 9em;
     color: rgb(1, 5, 18);
+    padding: 0.3em;
 }
 
 #flag {
@@ -85,54 +83,49 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(6,3,46,1) 55%, rgba(9,7,55,1) 80%, rgba(7,2,71,0.8882279829545454) 100%);
     font-weight: bold;
 }
 
 #p1 {
-    align-self: flex-start;
     width: 150px;
     height: 150px;
-    border-radius: 30% 70% 70% 30% / 30% 35% 65% 70%;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     background: linear-gradient(90deg, rgba(249,239,2,1) 0%, rgba(225,227,23,1) 53%, rgba(249,239,2,1) 100%);
-    margin-left: 2em;
-    margin-top: 2em;
-    padding: 15px;
+    font-size: 1.2em;
     font-weight: inherit;
+    padding: 0.5em 1em 0.5em 1em;
 }
 
 #p2 {
-    align-self: center;
     width: 150px;
     height: 150px;
-    border-radius: 30% 70% 70% 30% / 30% 35% 65% 70%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(90deg, rgba(249,239,2,1) 0%, rgba(225,227,23,1) 53%, rgba(249,239,2,1) 100%);
-    padding: 25px;
+    font-size: 1.2em;
     font-weight: inherit;
+    padding: 0.5em 1em 0.5em 1em;
 }
 
 #p3 {
-    align-self: flex-end;
     width: 150px;
     height: 150px;
-    margin: 20px;
-    border-radius: 30% 70% 70% 30% / 30% 35% 65% 70%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(90deg, rgba(249,239,2,1) 0%, rgba(225,227,23,1) 53%, rgba(249,239,2,1) 100%);
-    margin-right: 2em;
-    margin-bottom: 2em;
-    padding: 10px;
     font-weight: inherit;
+    font-size: 1.2em;
+    font-weight: inherit;
+    padding: 0.5em 1em 0.5em 1em;
 }
 
 #blogs {
@@ -140,28 +133,32 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: stretch;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: rgb(1, 5, 18);
 }
 
 #blogs h2 {
     color:rgb(255, 254, 245);
     text-align: center;
-    margin: auto;
+    align-self: center;
+    text-decoration: underline;
 }
 
 .blog-link {
     width: 100vw;
+    text-align: center;
     text-decoration: none;
     color:rgb(1, 5, 18);
     font-size: 1.5em;
     background-color: #FBFCDF;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    border-style: solid;
-    border-color: black; 
-    border-width: 3px;
+    padding: 1.5em;
+    border: solid #000000;
+}
+
+.blog-link:hover {
+    box-shadow: 0 0 0.5em 0 rgb(65, 41, 174);
+    text-decoration: underline;
 }
 
 #donate {
@@ -192,29 +189,19 @@ body {
 }
 
 @media(max-width: 730px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: stretch;
-    }
-
-    #header h1 {
-        color: rgb(4, 18, 63);
-        margin: auto;
-    }
-
-    #nav-bar {
-        background-color: rgb(255, 254, 245);
-        position: static;
-    }
-
     #nav-links {
         display: none
     }
 
+    #home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     #home h2 {
         font-size: 7em;
+        justify-self: center;
     }
 
     #flag {
@@ -234,33 +221,24 @@ body {
         align-self: center;
         margin: 0;
     }
+}
 
-    @media(max-width: 450px) {
-        #home h2 {
-            font-size: 4em;
-            margin: auto;
-        }
+@media(max-width: 450px) {
+    #home h2 {
+        font-size: 5em;
+    }
 
-        #p1 {
-            padding: 10px;
-        }
+    .blog-link {
+        font-size: 1em;
+    }
 
-        #p2 {
-            padding: 13px;
-        }
+    #donate h3 {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
 
-        #p3 {
-            display: none;
-        }
-
-        #blogs h2 {
-            padding: 1px;
-            font-size: 1em;
-        }
-
-        #donate h3 {
-            font-size: 1.5em;
-            margin-bottom: 0;
-        }
+    #donate-link {
+        font-size: 1em;
+        padding: 5px 20px 5px 20px;
     }
 }
